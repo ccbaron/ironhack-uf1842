@@ -9,12 +9,12 @@
 
 function combineNames(name1, name2) {
 
-// Concatenamos los dos nombres con un espacio en medio
-// Usamos el operador + para unir los strings
-let fullName = name1 + ' ' + name2
+    // Concatenamos los dos nombres con un espacio en medio
+    // Usamos el operador + para unir los strings
+    let fullName = name1 + ' ' + name2
 
-// Devolvemos el resultado de la concatenación
-return fullName
+    // Devolvemos el resultado de la concatenación
+    return fullName
 
 }
 

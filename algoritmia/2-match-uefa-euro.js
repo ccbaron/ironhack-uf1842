@@ -9,6 +9,25 @@
 */
 function uefaEuro2016(teams, scores) {
 
+    const team1 = teams[0];  // Primer equipo (posición 0 del array)
+    const team2 = teams[1];  // Segundo equipo (posición 1 del array)
+    const score1 = scores[0]; // Goles del primer equipo
+    const score2 = scores[1]; // Goles del segundo equipo
+
+    // Creamos la primera parte del mensaje
+    const matchInfo = `At match ${team1} - ${team2}, `;
+
+    // Comparamos los goles para saber el resultado
+    if (score1 > score2) {
+        // Si el primer equipo tiene más goles
+        return matchInfo + `${team1} won!`;
+    } else if (score1 < score2) {
+        // Si el segundo equipo tiene más goles
+        return matchInfo + `${team2} won!`;
+    } else {
+        // Si ambos equipos tienen los mismos goles (empate)
+        return matchInfo + 'teams played draw.';
+    }
 }
 
 console.log(uefaEuro2016(['Germany', 'Ukraine'], [2, 0])) // "At match Germany - Ukraine, Germany won!"
