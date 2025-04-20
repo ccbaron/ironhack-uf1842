@@ -1,5 +1,7 @@
 // Esperamos a que el DOM esté completamente cargado
+
 document.addEventListener('DOMContentLoaded', function () {
+
     // Paso 1: Obtenemos todos los elementos que necesitamos
     const usernameInput = document.getElementById('username');
     const getInfoButton = document.querySelector('button');
@@ -10,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Paso 2: Añadimos el evento click al botón
     getInfoButton.addEventListener('click', function () {
+
         // Paso 3: Obtenemos el nombre de usuario del input
         const username = usernameInput.value.trim();
         console.log('Username ingresado:', username);
@@ -23,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
         fetch(`https://api.github.com/users/${username}`)
             .then(response => {
                 console.log('Respuesta recibida:', response);
+
                 // Paso 5: Verificamos si la respuesta es exitosa
                 if (!response.ok) {
                     throw new Error('Usuario no encontrado');
@@ -31,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .then(data => {
                 console.log('Datos recibidos:', data);
+
                 // Paso 6: Mostramos los datos en la tabla
                 fullNameCell.textContent = data.name || 'No disponible';
                 bioCell.textContent = data.bio || 'No disponible';
@@ -53,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .catch(error => {
                 console.error('Error:', error);
+
                 // Paso 7: Manejo de errores (BONUS)
                 alert('Error: ' + error.message);
             });
