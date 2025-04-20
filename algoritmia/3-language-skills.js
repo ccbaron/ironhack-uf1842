@@ -13,6 +13,24 @@
 
 function filterProgrammingLanguages(languages, minYears) {
 
+    // Creamos un array vacío para guardar los lenguajes que cumplan el requisito
+    const result = [];
+
+    // Recorremos cada lenguaje en el array de entrada
+    for (let i = 0; i < languages.length; i++) {
+        // Obtenemos el lenguaje actual
+        const language = languages[i];
+
+        // Comprobamos si cumple con los años mínimos requeridos
+        if (language.years >= minYears) {
+            // Si cumple, lo añadimos al array resultante
+            result.push(language.name);
+        }
+    }
+
+    // Devolvemos el array con los lenguajes que cumplen el requisito
+    return result;
+
 }
 
 // Caso 1: Candidata con suficientes años de experiencia en algunos lenguajes
