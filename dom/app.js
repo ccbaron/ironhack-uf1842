@@ -1,6 +1,5 @@
 // ¿En tu páis de origen es normal dejar propina?
 
-
     // Paso 1: Obtener los elementos que necesitamos del DOM
     const calculateButton = document.getElementById('calculate');
     const billAmountInput = document.getElementById('bill-amount');
