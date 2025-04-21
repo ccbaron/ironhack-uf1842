@@ -1,8 +1,5 @@
-// Esperamos a que el DOM esté completamente cargado
+    // Paso 1: Obtenemos todos los elementos que necesitamos del DOM
 
-document.addEventListener('DOMContentLoaded', function () {
-
-    // Paso 1: Obtenemos todos los elementos que necesitamos
     const usernameInput = document.getElementById('username');
     const getInfoButton = document.querySelector('button');
     const fullNameCell = document.getElementById('fullName');
@@ -63,4 +60,3 @@ document.addEventListener('DOMContentLoaded', function () {
                 alert('Error: ' + error.message);
             });
     });
-});

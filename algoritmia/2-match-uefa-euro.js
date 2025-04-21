@@ -18,12 +18,15 @@ function uefaEuro2016(teams, scores) {
     const matchInfo = `At match ${team1} - ${team2}, `;
 
     // Comparamos los goles para saber el resultado
+
     if (score1 > score2) {
         // Si el primer equipo tiene más goles
         return matchInfo + `${team1} won!`;
+
     } else if (score1 < score2) {
         // Si el segundo equipo tiene más goles
         return matchInfo + `${team2} won!`;
+
     } else {
         // Si ambos equipos tienen los mismos goles (empate)
         return matchInfo + 'teams played draw.';
